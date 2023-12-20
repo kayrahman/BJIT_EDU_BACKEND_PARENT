@@ -2,13 +2,18 @@ package com.bjit.edu_backend.backend.instructor;
 
 import com.bjit.edu_backend.backend.model.Course;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Set;
 @Entity
 @Table(name = "instructors")
+@Getter
+@Setter
 public class Instructor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(nullable = false)

@@ -13,12 +13,12 @@ import java.util.List;
 @RequiredArgsConstructor
 public class InstructorController {
 
-    private final CourseService courseService;
+    private final InstructorService instructorService;
 
     @PostMapping
-    public Course createCourse(@RequestBody CreateCourseRequest createCourseRequest) {
+    public Instructor createInstructor(@RequestBody CreateInstructorRequest createCourseRequest) {
         // Logic for creating a course
-        return courseService.createCourse(createCourseRequest);
+        return instructorService.createInstructor(createCourseRequest);
     }
 
  /*   @PostMapping("/{courseId}/lessons")
@@ -28,9 +28,9 @@ public class InstructorController {
     }*/
 
 
-    @GetMapping
+    /*@GetMapping
     public List<Course> getAllCourses() {
-        return courseService.getAllCourses();
-    }
+        return instructorService.getAllCourses();
+    }*/
 }
 

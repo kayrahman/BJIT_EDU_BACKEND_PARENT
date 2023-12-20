@@ -7,13 +7,24 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
 public class InstructorService {
     private final InstructorRepository instructorRepository;
-    /*public Instructor createInstructor(@RequestBody CreateInstructorRequest request) {
 
-    }*/
+    public Instructor createInstructor(@RequestBody CreateInstructorRequest request) {
+        Instructor instructor = new Instructor();
+        instructor.setName(request.getName());
+        instructor.setEmail(request.getEmail());
+
+
+        //instructor.setCourses(courses);
+
+        return instructorRepository.save(instructor);
+
+    }
 }
