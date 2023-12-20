@@ -1,12 +1,16 @@
 package com.bjit.edu_backend.backend.model;
 
+import com.bjit.edu_backend.backend.instructor.Instructor;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 
 @Entity
@@ -15,6 +19,7 @@ import java.sql.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@EntityListeners(AuditingEntityListener.class)
 public class Course {
 
     @Id
@@ -56,6 +61,13 @@ public class Course {
     @ManyToOne
     @JoinColumn(name = "instructor_id")
     private Instructor instructor;
+
+    @CreatedDate
+    @Column(
+            nullable = false,
+            updatable = false
+    )
+    private LocalDateTime createDate;
 
 
    /*

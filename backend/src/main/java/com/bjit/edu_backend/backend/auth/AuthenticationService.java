@@ -1,7 +1,7 @@
 package com.bjit.edu_backend.backend.auth;
 
 import com.bjit.edu_backend.backend.config.JwtService;
-import com.bjit.edu_backend.backend.repository.UserRepository;
+import com.bjit.edu_backend.backend.user.UserRepository;
 import com.bjit.edu_backend.backend.token.Token;
 import com.bjit.edu_backend.backend.token.TokenRepository;
 import com.bjit.edu_backend.backend.token.TokenType;

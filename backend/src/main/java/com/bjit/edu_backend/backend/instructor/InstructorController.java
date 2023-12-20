@@ -1,4 +1,4 @@
-package com.bjit.edu_backend.backend.controller;
+package com.bjit.edu_backend.backend.instructor;
 
 import com.bjit.edu_backend.backend.dto.CreateCourseRequest;
 import com.bjit.edu_backend.backend.model.Course;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/courses")
+@RequestMapping("/api/v1/instructors")
 @RequiredArgsConstructor
-public class CourseController {
+public class InstructorController {
 
     private final CourseService courseService;
 

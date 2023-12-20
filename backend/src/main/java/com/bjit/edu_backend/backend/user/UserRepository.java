@@ -1,4 +1,4 @@
-package com.bjit.edu_backend.backend.repository;
+package com.bjit.edu_backend.backend.user;
 
 import com.bjit.edu_backend.backend.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;

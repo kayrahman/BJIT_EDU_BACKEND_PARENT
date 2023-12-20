@@ -53,6 +53,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
       var isTokenValid = tokenRepository.findByToken(jwt)
           .map(t -> !t.isExpired() && !t.isRevoked())
           .orElse(false);
+      logger.info("isTokenValid > "+isTokenValid);
       if (jwtService.isTokenValid(jwt, userDetails) && isTokenValid) {
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
             userDetails,
@@ -63,8 +64,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             new WebAuthenticationDetailsSource().buildDetails(request)
         );
         SecurityContextHolder.getContext().setAuthentication(authToken);
+      }else{
+        logger.info("Token is not valid");
       }
+    }else {
+      logger.info("User email is null");
     }
     filterChain.doFilter(request, response);
   }
 }
+//

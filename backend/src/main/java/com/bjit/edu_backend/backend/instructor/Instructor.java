@@ -1,5 +1,6 @@
-package com.bjit.edu_backend.backend.model;
+package com.bjit.edu_backend.backend.instructor;
 
+import com.bjit.edu_backend.backend.model.Course;
 import jakarta.persistence.*;
 import java.util.Set;
 @Entity

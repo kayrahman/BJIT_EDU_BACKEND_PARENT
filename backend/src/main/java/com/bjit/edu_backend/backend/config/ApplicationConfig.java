@@ -1,6 +1,6 @@
 package com.bjit.edu_backend.backend.config;
 
-import com.bjit.edu_backend.backend.repository.UserRepository;
+import com.bjit.edu_backend.backend.user.UserRepository;
 import com.bjit.edu_backend.backend.auditing.ApplicationAuditAware;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
